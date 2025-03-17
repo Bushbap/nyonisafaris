@@ -4,7 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Nyoni Safaris Navbar</title>
+    <title>Africa Birding Tours - Nyoni Safaris</title>
+    <style>
+        @font-face {
+            font-family: 'Forum';
+            src: url('src/assets/font/Forum-Regular.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'Avenir';
+            src: url('src/assets/font/avenir-light.ttf') format('truetype');
+        }
+        
+        .heading-font {
+            font-family: 'Forum', serif;
+        }
+        
+        .paragraph-font {
+            font-family: 'Avenir', sans-serif;
+        }
+    </style>
     <script>
         function toggleMenu() {
             const menu = document.getElementById("mobile-menu");
@@ -14,9 +33,9 @@
         }
     </script>
 </head>
-<body class="bg-[#fffdf7]">
-    <nav class="bg-white shadow-md h-[100px] flex items-center px-24 relative">
-        <p class="text-xl font-semibold">Nyoni Safaris</p>
+<body class="bg-white paragraph-font">
+    <nav class="bg-white shadow-md h-[100px] flex items-center px-12 relative">
+        <p class="text-xl font-semibold heading-font">Nyoni Safaris</p>
         
         <ul class="ml-auto hidden md:flex space-x-6 relative">
             <li class="group relative">
@@ -33,7 +52,7 @@
         </ul>
         
         <!-- Mobile Menu Button -->
-        <button id="hamburger-icon" class="md:hidden flex flex-col space-y-1 p-2 rounded-md absolute right-24" onclick="toggleMenu()">
+        <button id="hamburger-icon" class="md:hidden flex flex-col space-y-1 p-2 rounded-md absolute right-12" onclick="toggleMenu()">
             <span class="block w-6 h-1 bg-black rounded-md"></span>
             <span class="block w-6 h-1 bg-black rounded-md"></span>
             <span class="block w-6 h-1 bg-black rounded-md"></span>
