@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Nyoni Safaris Navbar</title>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("mobile-menu");
+            const icon = document.getElementById("hamburger-icon");
+            menu.classList.toggle("hidden");
+            icon.classList.toggle("text-red-700");
+        }
+    </script>
+</head>
+<body class="bg-[#fffdf7]">
+    <nav class="bg-white shadow-md h-[100px] flex items-center px-24 relative">
+        <p class="text-xl font-semibold">Nyoni Safaris</p>
+        
+        <ul class="ml-auto hidden md:flex space-x-6 relative">
+            <li class="group relative">
+                <a href="#" class="hover:text-gray-500">Tours</a>
+                <ul class="absolute left-0 mt-2 hidden w-40 bg-white shadow-md rounded-md group-hover:block">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Malawi</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">South Africa</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Zambia</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="hover:text-gray-500">About</a></li>
+            <li><a href="#" class="hover:text-gray-500">Contact</a></li>
+            <li><a href="#" class="hover:text-gray-500">Blog</a></li>
+        </ul>
+        
+        <!-- Mobile Menu Button -->
+        <button id="hamburger-icon" class="md:hidden flex flex-col space-y-1 p-2 rounded-md absolute right-24" onclick="toggleMenu()">
+            <span class="block w-6 h-1 bg-black rounded-md"></span>
+            <span class="block w-6 h-1 bg-black rounded-md"></span>
+            <span class="block w-6 h-1 bg-black rounded-md"></span>
+        </button>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed top-0 right-0 w-1/2 h-full bg-white shadow-lg flex flex-col p-6 space-y-4">
+            <button class="self-end text-xl" onclick="toggleMenu()">&times;</button>
+            <a href="#" class="hover:text-gray-500">Tours</a>
+            <div class="ml-4 space-y-2">
+                <a href="#" class="block hover:text-gray-500">Malawi</a>
+                <a href="#" class="block hover:text-gray-500">South Africa</a>
+                <a href="#" class="block hover:text-gray-500">Zambia</a>
+            </div>
+            <a href="#" class="hover:text-gray-500">About</a>
+            <a href="#" class="hover:text-gray-500">Contact</a>
+            <a href="#" class="hover:text-gray-500">Blog</a>
+        </div>
+    </nav>
+</body>
+</html>

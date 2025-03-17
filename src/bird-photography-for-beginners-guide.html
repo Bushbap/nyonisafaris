@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #fffdf7; /* Custom background color */
+        }
+    </style>
+</head>
+<body class="">
+
+  <nav class="bg-white shadow-md h-[100px] flex items-center px-24 relative">
+    <p class="text-xl font-semibold">Nyoni Safaris</p>
+    
+    <ul class="ml-auto hidden md:flex space-x-6 relative">
+        <li class="group relative">
+            <a href="#" class="hover:text-gray-500">Tours</a>
+            <ul class="absolute left-0 mt-2 hidden w-40 bg-white shadow-md rounded-md group-hover:block">
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Malawi</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">South Africa</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Zambia</a></li>
+            </ul>
+        </li>
+        <li><a href="#" class="hover:text-gray-500">About</a></li>
+        <li><a href="#" class="hover:text-gray-500">Contact</a></li>
+        <li><a href="#" class="hover:text-gray-500">Blog</a></li>
+    </ul>
+    
+    <!-- Mobile Menu Button -->
+    <button id="hamburger-icon" class="md:hidden flex flex-col space-y-1 p-2 rounded-md absolute right-24" onclick="toggleMenu()">
+        <span class="block w-6 h-1 bg-black rounded-md"></span>
+        <span class="block w-6 h-1 bg-black rounded-md"></span>
+        <span class="block w-6 h-1 bg-black rounded-md"></span>
+    </button>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-0 right-0 w-1/2 h-full bg-white shadow-lg flex flex-col p-6 space-y-4">
+        <button class="self-end text-xl" onclick="toggleMenu()">&times;</button>
+        <a href="#" class="hover:text-gray-500">Tours</a>
+        <div class="ml-4 space-y-2">
+            <a href="#" class="block hover:text-gray-500">Malawi</a>
+            <a href="#" class="block hover:text-gray-500">South Africa</a>
+            <a href="#" class="block hover:text-gray-500">Zambia</a>
+        </div>
+        <a href="#" class="hover:text-gray-500">About</a>
+        <a href="#" class="hover:text-gray-500">Contact</a>
+        <a href="#" class="hover:text-gray-500">Blog</a>
+    </div>
+</nav>
+
+<section class="flex justify-center items-center min-h-screen p-5">
+    <div class="w-full max-w-3xl bg-white shadow-lg rounded-lg p-6">
+        
+        <!-- FAQ: Bird Photography -->
+        <div>
+            <h2 class="text-xl font-semibold mb-4">FAQ's About Bird Photography</h2>
+            <div class="space-y-4">
+                <div class="border-b border-gray-300">
+                    <button class="accordion w-full text-left flex justify-between items-center p-3 font-medium text-gray-700 focus:outline-none">
+                        Is JPEG or RAW better for bird photography?
+                        <span class="icon transform transition-transform">+</span>
+                    </button>
+                    <div class="panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="p-3 text-gray-600">RAW is typically better, as it allows greater flexibility in editing and recovering details later.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300">
+                    <button class="accordion w-full text-left flex justify-between items-center p-3 font-medium text-gray-700 focus:outline-none">
+                        Are DSLR cameras good for bird photography?
+                        <span class="icon transform transition-transform">+</span>
+                    </button>
+                    <div class="panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="p-3 text-gray-600">Yes, DSLRs are great due to their durability, excellent autofocus capabilities, and long battery life.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300">
+                    <button class="accordion w-full text-left flex justify-between items-center p-3 font-medium text-gray-700 focus:outline-none">
+                        What kind of camera is good for bird photography?
+                        <span class="icon transform transition-transform">+</span>
+                    </button>
+                    <div class="panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="p-3 text-gray-600">DSLR or mirrorless cameras with fast autofocus, good low-light performance, and manual control settings are ideal.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300">
+                    <button class="accordion w-full text-left flex justify-between items-center p-3 font-medium text-gray-700 focus:outline-none">
+                        How hard is bird photography?
+                        <span class="icon transform transition-transform">+</span>
+                    </button>
+                    <div class="panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="p-3 text-gray-600">Bird photography can be challenging but rewarding. It requires patience, practice, and a willingness to learn technical skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spacer between FAQs -->
+        <div class="border-t border-gray-300 my-6"></div>
+
+        <!-- FAQ: Nyoni Safaris -->
+        <div>
+            <h2 class="text-xl font-semibold mb-4">FAQ's About Nyoni Safaris</h2>
+            <div class="space-y-4">
+                <div class="border-b border-gray-300">
+                    <button class="accordion w-full text-left flex justify-between items-center p-3 font-medium text-gray-700 focus:outline-none">
+                        What destinations does Nyoni Safaris cover?
+                        <span class="icon transform transition-transform">+</span>
+                    </button>
+                    <div class="panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="p-3 text-gray-600">Nyoni Safaris specializes in birding tours across Southern and East Africa, including locations like Kruger National Park and Malawi.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300">
+                    <button class="accordion w-full text-left flex justify-between items-center p-3 font-medium text-gray-700 focus:outline-none">
+                        What’s included in a Nyoni Safaris birding tour?
+                        <span class="icon transform transition-transform">+</span>
+                    </button>
+                    <div class="panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="p-3 text-gray-600">Tours include professional guiding, transportation, accommodation, meals, and expert birding guidance.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300">
+                    <button class="accordion w-full text-left flex justify-between items-center p-3 font-medium text-gray-700 focus:outline-none">
+                        Do I need special equipment for Nyoni Safaris tours?
+                        <span class="icon transform transition-transform">+</span>
+                    </button>
+                    <div class="panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="p-3 text-gray-600">Binoculars, comfortable clothing, and suitable photography gear are recommended. Specific gear recommendations can be provided upon request.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+    <script>
+        const accordions = document.querySelectorAll(".accordion");
+
+        accordions.forEach((accordion) => {
+            accordion.addEventListener("click", function () {
+                const panel = this.nextElementSibling;
+                const icon = this.querySelector(".icon");
+
+                // Close all other panels first
+                document.querySelectorAll(".panel").forEach((item) => {
+                    if (item !== panel) {
+                        item.style.maxHeight = null;
+                        item.classList.remove("py-3");
+                        item.previousElementSibling.querySelector(".icon").innerText = "+";
+                    }
+                });
+
+                // Toggle current panel
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                    panel.classList.remove("py-3");
+                    icon.innerText = "+";
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    panel.classList.add("py-3");
+                    icon.innerText = "-";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
