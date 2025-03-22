@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
     <title>Red-Chested Cuckoo</title>
+    <meta name="description" content="Explore Africa’s top birding destinations with Nyoni Safaris. Discover rare and beautiful bird species in Malawi, South Africa, and Zambia on expert-led tours.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="assets/images/nyonisafaris-favicon.webp">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
       @font-face {
           font-family: 'Forum';
@@ -32,19 +35,59 @@
         }
       .square-img {
             width: 100%;
-            height: 300px;
+            height: 500px;
             object-fit: cover;
             object-position: center;
         }
   </style>
 </head>
 <body class="bg-white text-gray-900">
-    <div class="max-w-4xl mx-auto p-4">
+    <nav class="bg-white h-[100px] flex items-center px-12 relative">
+        <p class="text-2xl font-semibold heading-font">Nyoni Safaris</p>
+        
+        <ul class="ml-auto hidden md:flex space-x-6 relative">
+            <li class="group relative">
+                <a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">Tours</a>
+                <ul class="absolute left-0 mt-0 w-40 bg-white shadow-md rounded-md hidden group-hover:block" onmouseover="this.classList.remove('hidden')" onmouseleave="this.classList.add('hidden')">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Malawi</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-50">South Africa</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Zambia</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">About</a></li>
+            <li><a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">Contact</a></li>
+            <li><a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">Blog</a></li>
+        </ul>
+        
+        <!-- Mobile Menu Button -->
+        <button id="hamburger-icon" class="md:hidden flex flex-col space-y-1 p-2 rounded-md absolute right-12" onclick="toggleMenu()">
+            <span class="block w-6 h-1 bg-black rounded-md"></span>
+            <span class="block w-6 h-1 bg-black rounded-md"></span>
+            <span class="block w-6 h-1 bg-black rounded-md"></span>
+        </button>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed top-0 right-0 w-1/2 h-full bg-white shadow-lg flex flex-col p-6 space-y-4">
+            <button class="self-end text-xl" onclick="toggleMenu()">&times;</button>
+            <a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">Tours</a>
+            <div class="ml-4 space-y-2">
+                <a href="#" class="block hover:text-gray-500">Malawi</a>
+                <a href="#" class="block hover:text-gray-500">South Africa</a>
+                <a href="#" class="block hover:text-gray-500">Zambia</a>
+            </div>
+            <a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">About</a>
+            <a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">Contact</a>
+            <a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">Blog</a>
+        </div>
+    </nav>
+    <div class="max-w-5xl mx-auto">
 
-           <!-- Bird Image -->
-        <div class="w-full text-center">
-          <img src="assets/birds/red-chested-cuckoo/red-chested-cuckoo-perched-perfectly.jpg" alt="Red-Chested Cuckoo" class="w-full h-auto">
-      </div>
+      <!-- Image Box Section -->
+      <section class="flex justify-center items-center">
+        <div class="w-full max-w-4xl">
+            <img src="assets/birds/red-chested-cuckoo/red-chested-cuckoo-perched-perfectly.jpg" alt="Red-Chested Cuckoo" class="w-full half-page-img">
+        </div>
+    </section>
 
        <!-- Title -->
         <div class="py-8">
@@ -69,15 +112,16 @@
 
         
          <!-- Distribution -->
-         <h2 class="text-2xl font-semibold mt-4">Distribution of the Red-Chested Cuckoo</h2>
+         <h2 class="text-2xl font-semibold mt-4 text-center text-center">Distribution of the Red-Chested Cuckoo</h2>
          <div class="flex flex-col md:flex-row items-center mt-4">
              <div class="md:w-1/2 p-4">
-                 <img src="assets/birds/red-chested-cuckoo/distribution.png" alt="Distribution Map" class="w-full square-img">
+                 <img src="assets/birds/red-chested-cuckoo/red-chested-cuckoo-distribution.png" alt="Distribution Map" class="w-full square-img">
              </div>
-             <div class="md:w-1/2 p-4">
-                 <h3 class="text-xl font-medium">Countries</h3>
+
+             <div class="md:w-1/2 p-4 lg:text-left text-center">
+                 <h3 class="text-2xl font-bold mt-4 underline-custom">Countries</h3>
                  <p class="text-lg paragraph-font">The Red-Chested Cuckoo is found in various regions across sub-Saharan Africa, including South Africa, Zimbabwe, Botswana, Namibia, Zambia, Malawi, Tanzania, Kenya, and Uganda. It prefers forested and woodland habitats.</p>
-                 <h3 class="text-xl font-medium mt-4">Migration</h3>
+                 <h3 class="text-2xl font-bold mt-4 underline-custom">Migration</h3>
                  <p class=" text-lg paragraph-font">This species is a partial migrant, with populations in southern Africa moving northwards during the austral winter. Some individuals remain in their breeding territories year-round, while others migrate to central and eastern Africa in search of more favorable conditions.</p>
              </div>
          </div>
@@ -90,43 +134,50 @@
       </section>
         
          <!-- Habitat -->
-         <h2 class="text-2xl font-semibold mt-4 text-center">Red-Chested Cuckoo Habitat</h2>
+         <h2 class="text-2xl font-semibold mt-4 text-center py-4">Red-Chested Cuckoo Habitat</h2>
          <p class="text-lg text-center paragraph-font">The Red-Chested Cuckoo prefers dense forests, woodlands, and riverine vegetation. It is commonly found in subtropical and tropical regions, where it thrives in areas with plenty of tree cover and a rich insect population.</p>
          
         <!-- Feeding & Diet -->
-        <h2 class="text-2xl font-semibold mt-4 text-center">Feeding & Diet of the Red-Chested Cuckoo</h2>
+        <h2 class="text-2xl font-semibold mt-4 text-center py-4">Feeding & Diet of the Red-Chested Cuckoo</h2>
         <p class="text-lg text-center paragraph-font">The Red-Chested Cuckoo primarily feeds on insects, with caterpillars being its favorite prey. It also consumes beetles, grasshoppers, and other small invertebrates. This bird forages among trees and shrubs, using its keen eyesight to locate prey before swooping down to catch it.</p>
 
         <!-- Plumage -->
-        <h2 class="text-2xl font-semibold mt-4 text-center py-4">Plumage of the Red-Chested Cuckoo</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h2 class="text-2xl font-semibold mt-4 text-center pt-4">Plumage of the Red-Chested Cuckoo</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-2 text-center lg:text-left">
             <div>
-                <h3 class="text-2xl font-medium mt-2 text-left">Adult</h3>
+                <h3 class="text-2xl font-medium mt-2 py-1 underline-custom lg:ml-6">Adult</h3>
                 <p class="text-lg paragraph-font">Adult males have a rich chestnut-red breast and belly, with a slate-gray head, back, and wings. Their eye-ring is a striking yellow, and they have a sleek, slightly curved beak. Females resemble males but may have a slightly paler coloration.</p>
             </div>
             <div>
-                <h3 class="text-2xl font-medium mt-2">Juvenile</h3>
+                <h3 class="text-2xl font-medium mt-2 py-1 underline-custom lg:ml-6">Juvenile</h3>
                 <p class="text-lg paragraph-font">Juveniles are duller in coloration, with a more mottled chestnut and gray pattern. They often have a scaly appearance due to pale feather edges and lack the pronounced yellow eye-ring seen in adults. Immature birds gradually acquire the adult coloration over time.</p>
             </div>
         </div>
 
           <!-- Image Box Section -->
-          <section class="flex justify-center items-center my-12">
-            <div class="w-full">
+          <section class="flex justify-center items-center">
+            <div class="w-full max-w-4xl">
                 <img src="assets/birds/red-chested-cuckoo/red-chested-cuckoo-in-dense-woodland.jpg" alt="Red-Chested Cuckoo" class="w-full h-auto">
             </div>
         </section>
         
           <!-- Behaviour -->
-          <h2 class="text-2xl font-bold mt-4 py-6 text-center">Behaviour of the Red-Chested Cuckoo</h2>
-          <h3 class="text-2xl font-medium mt-4">Social</h3>
-          <p class="text-lg paragraph-font">The Red-Chested Cuckoo is generally solitary and elusive, often remaining hidden in dense foliage. It is more often heard than seen, thanks to its distinctive call. Unlike many other birds, it does not form flocks but maintains an independent existence.</p>
+          <h2 class="text-2xl font-bold mt-10 text-center ">Behaviour of the Red-Chested Cuckoo</h2>
+           <section class="flex justify-center items-center">
+          <div class="w-full max-w-3xl">
+          <div class="text-center lg:text-left">
+          <h3 class="text-2xl font-medium mt-4 lg:ml-6 underline-custom">Social</h3>
+          <p class="text-lg paragraph-font py-6">The Red-Chested Cuckoo is generally solitary and elusive, often remaining hidden in dense foliage. It is more often heard than seen, thanks to its distinctive call. Unlike many other birds, it does not form flocks but maintains an independent existence.</p>
           
-          <h3 class="text-2xl font-medium mt-2">Breeding</h3>
-          <p class="text-lg paragraph-font">This species is a brood parasite, meaning it does not build its own nest but instead lays eggs in the nests of other bird species. The most common hosts include robin-chats and thrushes. The cuckoo chick hatches earlier than the host’s young and often removes the other eggs or chicks from the nest, ensuring it receives all parental care.</p>
+          <h3 class="text-2xl font-medium mt-2 underline-custom lg:ml-6">Breeding</h3>
+          <p class="text-lg paragraph-font py-6">This species is a brood parasite, meaning it does not build its own nest but instead lays eggs in the nests of other bird species. The most common hosts include robin-chats and thrushes. The cuckoo chick hatches earlier than the host’s young and often removes the other eggs or chicks from the nest, ensuring it receives all parental care.</p>
           
-          <h3 class="text-2xl font-medium mt-2">Call</h3>
-          <p class="text-lg paragraph-font">The Red-Chested Cuckoo is well known for its distinctive call, often described as a repetitive and melodious “piet-my-vrou” sound. This call is a key identifier of the species, particularly during the breeding season when males vocalize frequently to establish territory and attract mates.</p>
+          <h3 class="text-2xl font-medium mt-2 underline-custom lg:ml-6">Call</h3>
+          <p class="text-lg paragraph-font py-6">The Red-Chested Cuckoo is well known for its distinctive call, often described as a repetitive and melodious “piet-my-vrou” sound. This call is a key identifier of the species, particularly during the breeding season when males vocalize frequently to establish territory and attract mates.</p>
       </div>
+    </div>
+    </section>
+
+      <script src="assets/js/scripts.js"></script>
 </body>
 </html>
