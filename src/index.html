@@ -31,7 +31,7 @@
   <meta name="twitter:image" content="assets/og-image.jpg">
   
   <!-- Favicon and Touch Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/nyonisafaris-favicon.webp">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="assets/site.webmanifest">
   
@@ -46,48 +46,62 @@
 </head>
 
 <body class="bg-white paragraph-font">
-    <nav class="bg-white h-[100px] flex items-center px-12 relative">
-        <p class="text-2xl font-semibold heading-font">Nyoni Safaris</p>
-        
-        <ul class="ml-auto hidden md:flex space-x-6 relative">
-          <li class="group relative">
-            <a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">Tours</a>
-            <ul class="absolute left-0 mt-0 w-40 bg-white shadow-md rounded-md hidden group-hover:block"
-                onmouseover="this.classList.remove('hidden')"
-                onmouseleave="this.classList.add('hidden')">
-              <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Malawi</a></li>
-              <li><a href="#" class="block px-4 py-2 hover:bg-red-50">South Africa</a></li>
-              <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Zambia</a></li>
-            </ul>
+  <nav class="bg-white h-[100px] flex items-center px-12 relative z-50">
+    <a href="index.html" class="ml-0 lg:ml-24 text-2xl font-semibold heading-font">Nyoni Safaris</a>
+    
+    <ul class="ml-auto hidden md:flex space-x-6 relative mr-0 lg:mr-24">
+      <li class="group relative">
+        <a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">Tours</a>
+        <ul class="absolute left-0 mt-0 w-40 bg-white shadow-md rounded-md overflow-hidden hidden group-hover:block z-50"
+            onmouseover="this.classList.remove('hidden')"
+            onmouseleave="this.classList.add('hidden')">
+          <li>
+            <a href="malawi-birding-tours.html" class="block px-4 py-2 hover:bg-red-50">Malawi</a>
           </li>
-          <li><a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">About</a></li>
-          <li><a href="contact.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">Contact</a></li>
-          <li><a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">Blog</a></li>
+          <li>
+            <a href="south-africa-birding-tours.html" class="block px-4 py-2 hover:bg-red-50">South Africa</a>
+          </li>
+          <li>
+            <a href="zambia-birding-tours.html" class="block px-4 py-2 hover:bg-red-50">Zambia</a>
+          </li>
         </ul>
-        
-      <!-- Mobile Menu Button -->
-<button id="hamburger-icon" aria-controls="mobile-menu" aria-expanded="false"
-class="md:hidden flex flex-col space-y-1 p-2 rounded-md absolute right-12"
-onclick="toggleMenu()">
-<span class="block w-6 h-1 bg-black rounded-md"></span>
-<span class="block w-6 h-1 bg-black rounded-md"></span>
-<span class="block w-6 h-1 bg-black rounded-md"></span>
-</button>
-
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="fixed top-0 right-0 w-1/2 h-full bg-white shadow-lg flex flex-col p-6 space-y-4 transform transition-transform duration-200 ease-in-out translate-x-full">
-<button class="self-end text-xl" onclick="toggleMenu()">&times;</button>
-<a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">Tours</a>
-<div class="ml-4 space-y-2">
-<a href="#" class="block hover:text-red-700">Malawi</a>
-<a href="#" class="block hover:text-red-700">South Africa</a>
-<a href="#" class="block hover:text-red-700">Zambia</a>
-</div>
-<a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">About</a>
-<a href="contact.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">Contact</a>
-<a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[2px]">Blog</a>
-</div>
-      </nav>
+      </li>
+      <li>
+        <a href="about.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">About</a>
+      </li>
+      <li>
+        <a href="contact.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">Contact</a>
+      </li>
+      <li>
+        <a href="blog.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">Blog</a>
+      </li>
+    </ul>
+    
+    <!-- Mobile Menu Button -->
+    <button id="hamburger-icon" aria-controls="mobile-menu" aria-expanded="false"
+            class="md:hidden flex flex-col space-y-1 p-2 rounded-md absolute right-12"
+            onclick="toggleMenu()">
+      <span class="block w-6 h-1 bg-black rounded-md"></span>
+      <span class="block w-6 h-1 bg-black rounded-md"></span>
+      <span class="block w-6 h-1 bg-black rounded-md"></span>
+    </button>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 right-0 w-1/2 h-full bg-white shadow-lg flex flex-col p-6 space-y-4 transform transition-transform duration-200 ease-in-out translate-x-full">
+      <button class="self-end text-xl" onclick="toggleMenu()">&times;</button>
+      <a href="#" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">Tours</a>
+      <div class="ml-4 space-y-2">
+        <a href="malawi-birding-tours.html" class="block hover:text-red-700">Malawi</a>
+        <a href="south-africa-birding-tours.html" class="block hover:text-red-700">South Africa</a>
+        <a href="zambia-birding-tours.html" class="block hover:text-red-700">Zambia</a>
+      </div>
+      <a href="about.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">About</a>
+      <a href="contact.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">Contact</a>
+      <a href="blog.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">Blog</a>
+    </div>
+  </nav>
+  
+  
 
       <!-- Hero Section Container -->
   <section class="flex flex-col items-center">
@@ -128,7 +142,7 @@ onclick="toggleMenu()">
 </section>
 
 <!-- Short Introduction -->
-<section class="mt-6">
+<section class="py-4 lg:py-24 mt-6">
   <div class="container mx-auto px-4 py-4 flex flex-col items-center justify-center">
     <div class="max-w-4xl">
       <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-center mb-4">
@@ -151,7 +165,7 @@ onclick="toggleMenu()">
 
 
 <!-- Blogs About Birding -->
-<section class="mt-8 py-12">
+<section class="mt-8 py-4 lg:py-12">
   <div class="container mx-auto max-w-[1420px] px-4 flex flex-col md:flex-row items-center justify-center">
     <!-- Image on left on medium+ screens -->
     <div class="md:w-1/2 p-4">
@@ -176,7 +190,7 @@ onclick="toggleMenu()">
   </div>
 </section>
 
-<section class="py-12">
+<section class="py-4 lg:py-24">
   <div class="container mx-auto max-w-5xl px-4">
     <h2 class="text-3xl font-bold text-center mb-8">Featured Africa Birding Tours</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -230,7 +244,7 @@ onclick="toggleMenu()">
 </section>
 
 <!-- Why go on a African Birding Tour? -->
-<section class="mt-6">
+<section class="py-4 lg:py-12 mt-6">
   <div class="container mx-auto px-4 py-4 flex flex-col items-center justify-center">
     <div class="max-w-4xl">
       <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-center mb-4">
@@ -244,7 +258,7 @@ onclick="toggleMenu()">
 </section>
 
 <!-- Image box -->
-<section>
+<section class="py-4 lg:py-24">
   <div class="flex justify-center items-center w-full px-4 py-4">
     <div class="w-full max-w-[980px]">
       <img src="assets/images/southern-kruger-sunset.jpg" alt="Description of the image" class="w-full h-auto lg:h-[500px] object-cover">
@@ -254,7 +268,7 @@ onclick="toggleMenu()">
 </section>
 
 <!-- Testimonial Section -->
-<section class="py-12">
+<section class="py-4 lg:py-12">
   <div class="container mx-auto max-w-4xl px-4">
     <div class="text-center">
       <h3 class="text-2xl font-bold mb-2">Nicole</h3>
@@ -266,7 +280,7 @@ onclick="toggleMenu()">
   </div>
 </section>
 
-<section class="py-12">
+<section class="py-4 lg:py-24">
   <div class="container mx-auto max-w-5xl px-4">
     <div class="flex flex-col-reverse md:flex-row items-stretch bg-white rounded-md shadow-md overflow-hidden">
       <!-- Subscribe Form (Bottom on small devices, left on md+) -->
@@ -304,7 +318,7 @@ onclick="toggleMenu()">
 </section>
 
 <!-- What is a typical Africa Birding Tour like -->
-<section class="mt-6">
+<section class="py-4 lg:py-12 mt-6">
   <div class="container mx-auto px-4 py-4 flex flex-col items-center justify-center">
     <div class="max-w-4xl">
       <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-center mb-4">
@@ -318,7 +332,7 @@ onclick="toggleMenu()">
 </section>
 
 <!-- Recent Blogs Section -->
-<section class="py-12">
+<section class="py-4 lg:py-24">
   <div class="container mx-auto max-w-6xl px-4">
     <h2 class="text-3xl font-bold text-center mb-8">Recent Blogs</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -379,7 +393,7 @@ onclick="toggleMenu()">
 </section>
 
 <!-- Virtual Bird Walk Section -->
-<section class="py-12">
+<section class="py-4 lg:py-12">
   <div class="container mx-auto max-w-5xl px-4">
     <h2 class="text-3xl font-bold text-center mb-4">Virtual Bird Walk</h2>
     <p class="text-gray-700 text-center mb-8">
@@ -387,7 +401,7 @@ onclick="toggleMenu()">
     </p>
     <div class="relative" style="padding-top: 56.25%;">
       <iframe 
-        src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+        src="https://www.youtube.com/embed/3W2k49KRlHc?si=QGfPBAktBKRTmSZk" 
         title="Virtual Bird Walk" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -399,7 +413,7 @@ onclick="toggleMenu()">
 </section>
 
 <!-- Call to Action: Book a Tour Today -->
-<section class="py-12 bg-gray-100">
+<section class="py-12 bg-white">
   <div class="container mx-auto max-w-5xl px-4 text-center">
     <h2 class="text-3xl font-bold mb-4">Book a Tour Today</h2>
     <p class="text-gray-700 mb-6">
@@ -413,70 +427,72 @@ onclick="toggleMenu()">
 
 
 
-<footer class="bg-white text-gray-800 py-12">
+<footer class="bg-white text-gray-800 py-12 text-center">
   <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <!-- Column 1: Menu -->
-      <div>
-        <h3 class="text-xl font-bold mb-4">Menu</h3>
-        <ul>
-          <li class="mb-2">
-            <a href="index.html" class="border-b-2 border-red-700 hover:border-red-700 transition duration-300">Home</a>
-          </li>
-          <li class="mb-2">
-            <a href="tours.html" class="border-b-2 border-transparent hover:border-red-700 transition duration-300">Tours</a>
-          </li>
-          <li class="mb-2">
-            <a href="about.html" class="border-b-2 border-transparent hover:border-red-700 transition duration-300">About</a>
-          </li>
-          <li class="mb-2">
-            <a href="contact.html" class="border-b-2 border-transparent hover:border-red-700 transition duration-300">Contact</a>
-          </li>
-          <li class="mb-2">
-            <a href="blog.html" class="border-b-2 border-transparent hover:border-red-700 transition duration-300">Blog</a>
-          </li>
-        </ul>
+    <div class="max-w-4xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- Column 1: Menu -->
+        <div>
+          <h3 class="text-lg md:text-xl font-bold mb-4">Menu</h3>
+          <ul>
+            <li class="mb-2">
+              <a href="index.html" class="text-sm md:text-base border-b-2 border-red-700 hover:border-red-700 transition duration-300">Home</a>
+            </li>
+            <li class="mb-2">
+              <a href="tours.html" class="text-sm md:text-base border-b-2 border-transparent hover:border-red-700 transition duration-300">Tours</a>
+            </li>
+            <li class="mb-2">
+              <a href="about.html" class="text-sm md:text-base border-b-2 border-transparent hover:border-red-700 transition duration-300">About</a>
+            </li>
+            <li class="mb-2">
+              <a href="contact.html" class="text-sm md:text-base border-b-2 border-transparent hover:border-red-700 transition duration-300">Contact</a>
+            </li>
+            <li class="mb-2">
+              <a href="blog.html" class="text-sm md:text-base border-b-2 border-transparent hover:border-red-700 transition duration-300">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Column 2: Countries -->
+        <div>
+          <h3 class="text-lg md:text-xl font-bold mb-4">Destinations</h3>
+          <ul>
+            <li class="mb-2">
+              <a href="malawi.html" class="text-sm md:text-base border-b-2 border-transparent hover:border-red-700 transition duration-300">Malawi</a>
+            </li>
+            <li class="mb-2">
+              <a href="south-africa.html" class="text-sm md:text-base border-b-2 border-transparent hover:border-red-700 transition duration-300">South Africa</a>
+            </li>
+            <li class="mb-2">
+              <a href="zambia.html" class="text-sm md:text-base border-b-2 border-transparent hover:border-red-700 transition duration-300">Zambia</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Column 3: Contact & Socials -->
+        <div>
+          <h3 class="text-lg md:text-xl font-bold mb-4">Contact & Socials</h3>
+          <ul>
+            <li class="mb-2">
+              <a href="mailto:eugene@nyonisafaris.com" class="text-sm md:text-base border-b-2 border-transparent hover:border-red-700 transition duration-300">eugene@nyonisafaris.com</a>
+            </li>
+            <li class="mb-2">
+              <a href="https://facebook.com" target="_blank" rel="noopener" class="text-sm md:text-base border-b-2 border-transparent hover:border-red-700 transition duration-300">Facebook</a>
+            </li>
+            <li class="mb-2">
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="text-sm md:text-base border-b-2 border-transparent hover:border-red-700 transition duration-300">Instagram</a>
+            </li>
+            <li class="mb-2">
+              <a href="https://twitter.com" target="_blank" rel="noopener" class="text-sm md:text-base border-b-2 border-transparent hover:border-red-700 transition duration-300">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Column 4: Logo -->
+        <div class="flex items-center justify-center">
+          <img src="assets/images/nyonibirdingsafarislogoblack.png" alt="Nyoni Safaris Logo" class="w-16">
+        </div>
       </div>
-      <!-- Column 2: Countries -->
-      <div>
-        <h3 class="text-xl font-bold mb-4">Countries</h3>
-        <ul>
-          <li class="mb-2">
-            <a href="malawi.html" class="border-b-2 border-transparent hover:border-red-700 transition duration-300">Malawi</a>
-          </li>
-          <li class="mb-2">
-            <a href="south-africa.html" class="border-b-2 border-transparent hover:border-red-700 transition duration-300">South Africa</a>
-          </li>
-          <li class="mb-2">
-            <a href="zambia.html" class="border-b-2 border-transparent hover:border-red-700 transition duration-300">Zambia</a>
-          </li>
-        </ul>
+      <div class="mt-8 text-center text-xs md:text-sm text-gray-500">
+        &copy; 2025 Nyoni Safaris. All rights reserved.
       </div>
-      <!-- Column 3: Contact & Socials -->
-      <div>
-        <h3 class="text-xl font-bold mb-4">Contact & Socials</h3>
-        <ul>
-          <li class="mb-2">
-            <a href="mailto:eugene@nyonisafaris.com" class="border-b-2 border-transparent hover:border-red-700 transition duration-300">eugene@nyonisafaris.com</a>
-          </li>
-          <li class="mb-2">
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="border-b-2 border-transparent hover:border-red-700 transition duration-300">Facebook</a>
-          </li>
-          <li class="mb-2">
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="border-b-2 border-transparent hover:border-red-700 transition duration-300">Instagram</a>
-          </li>
-          <li class="mb-2">
-            <a href="https://twitter.com" target="_blank" rel="noopener" class="border-b-2 border-transparent hover:border-red-700 transition duration-300">Twitter</a>
-          </li>
-        </ul>
-      </div>
-      <!-- Column 4: Logo -->
-      <div class="flex items-center justify-center">
-        <img src="assets/logo.png" alt="Nyoni Safaris Logo" class="w-32">
-      </div>
-    </div>
-    <div class="mt-8 text-center text-sm text-gray-500">
-      &copy; 2025 Nyoni Safaris. All rights reserved.
     </div>
   </div>
 </footer>
