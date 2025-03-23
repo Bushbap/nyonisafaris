@@ -43,11 +43,52 @@
   
   <!-- CSS -->
    <link rel="stylesheet" href="assets/css/styles.css">
+
+     <!-- Schema Markup -->
+     <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Nyoni Safaris",
+        "url": "https://nyonisafaris.com/",
+        "logo": "https://nyonisafaris.com/assets/images/nyonisafaris-favicon.webp",
+        "image": "https://nyonisafaris.com/assets/og-image.jpg",
+        "description": "Explore Africa’s top birding safari tours with Nyoni Safaris. Discover rare and beautiful wildlife experiences in Africa.",
+        "telephone": "+1234567890",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Your Street Address",
+          "addressLocality": "Your City",
+          "addressRegion": "Your State/Region",
+          "postalCode": "Your Postal Code",
+          "addressCountry": "Your Country"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/nyonisafaris",
+          "https://twitter.com/nyonisafaris",
+          "https://www.instagram.com/nyonisafaris"
+        ],
+        "priceRange": "$$"
+      }
+      </script>
+      
 </head>
 
 <body class="bg-white paragraph-font">
-  <nav class="bg-white h-[100px] flex items-center px-12 relative z-50">
-    <a href="index.html" class="ml-0 lg:ml-24 text-2xl font-semibold heading-font">Nyoni Safaris</a>
+  <nav class="bg-white h-[50px] lg:h-[100px] flex items-center px-12 relative z-50">
+    <a href="index.html" class="ml-0 lg:ml-24 text-xl lg:text-2xl font-semibold heading-font">Nyoni Safaris</a>
     
     <ul class="ml-auto hidden md:flex space-x-6 relative mr-0 lg:mr-24">
       <li class="group relative">
