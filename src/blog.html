@@ -101,30 +101,58 @@
     </div>
   </nav>
 
-<!-- Birding Journals Section (Fixed 450px Height) -->
-<section class="max-w-7xl mx-auto my-8 px-4 h-[350px] flex flex-col items-center justify-center">
-  <div class="text-center">
-    <h1 class="text-4xl font-bold mb-4">Birding Journals</h1>
-    <p class="text-lg text-gray-700 p1">
-      Explore our birding journals for expert insights on top birding sites across Africa, answers to frequently asked questions, and essential birding tips. Whether you're planning your next trip or looking to improve your birding skills, our blog has everything you need for an unforgettable adventure!
-    </p>
+<!-- Journal Section -->
+<section class="py-4 lg:py-24">
+  <div class="container mx-auto px-4 flex flex-col items-center justify-center py-8">
+    <div class="max-w-4xl text-center">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-4">
+        Journal
+      </h1>
+      <p class="text-md sm:text-base md:text-lg lg:text-lg text-gray-700">
+        Thinking of going on an African birding journey, guided by a passionate birding expert who knows the birds of Africa. Nyoni Safaris specialises in tailor-made Africa birding tours, featuring exceptional birding safaris from Southern and East Africa. Let me create the perfect tailor-made birding tour for you, personalised to match your pace and interests.
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- Card Section with Three Columns -->
-<section class="max-w-7xl mx-auto my-8 px-4 lg:h-[450px] justify-center">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Card 1 -->
-    <div class="bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]">
-      <img src="assets/images/Red-Chested Cuckoo.jpg" alt="Card Image 1" class="w-full h-[225px] object-cover">
+<!-- Filtering Pills -->
+<div class="container mx-auto px-4 mb-8 py-0 lg:py-4">
+  <div class="flex flex-wrap justify-center gap-4">
+    <button class="pill bg-red-700 text-white px-4 py-2 rounded-full" data-filter="all">
+      All
+    </button>
+    <button class="pill bg-gray-200 text-gray-800 px-4 py-2 rounded-full" data-filter="general">
+      General
+    </button>
+    <button class="pill bg-gray-200 text-gray-800 px-4 py-2 rounded-full" data-filter="malawi">
+      Malawi
+    </button>
+    <button class="pill bg-gray-200 text-gray-800 px-4 py-2 rounded-full" data-filter="south-africa">
+      South Africa
+    </button>
+    <button class="pill bg-gray-200 text-gray-800 px-4 py-2 rounded-full" data-filter="zambia">
+      Zambia
+    </button>
+  </div>
+</div>
+
+<!-- Blog Cards Section -->
+
+
+<section class="max-w-7xl mx-auto my-8 px-4">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="blogCards">
+    <!-- IMPORTANT KEEP AT TOP -->
+
+     <!-- Birding in Kafue National Park -->
+     <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="zambia">
+      <img src="assets/images/sample4.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
       <div class="p-4 flex flex-col flex-grow">
-        <h2 class="text-xl font-bold mb-2">Africa Birding Tours : Essential gear for Birding & Wildlife Safaris</h2>
-        <!-- Bottom container: Gray text on left, button on right -->
+        <h2 class="text-xl font-bold mb-2">Birding in Kafue National Park</h2>
         <div class="mt-auto flex items-center justify-between">
-          <a href="https://example.com/general-info" target="_blank" class="text-gray-500 text-sm">
-            General Info
+          <a href="zambia-birding-tours.html" class="text-gray-500 text-sm">
+            Zambia
           </a>
-          <a href="https://example.com/africa-birding-tours" target="_blank">
+          <a href="https://example.com/read-zambia">
             <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
               Read
             </button>
@@ -132,17 +160,107 @@
         </div>
       </div>
     </div>
-    <!-- Card 2 -->
-    <div class="bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]">
-      <img src="assets/images/leopard-on-anthill-kruger-park.jpg" alt="Card Image 2" class="w-full h-[225px] object-cover">
+
+    <!-- Birding in South Luangwa National Park -->
+    <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="zambia">
+      <img src="assets/images/zambia/leopardsideviewluangwa.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+      <div class="p-4 flex flex-col flex-grow">
+        <h2 class="text-xl font-bold mb-2">Birding in South Luangwa National Park</h2>
+        <div class="mt-auto flex items-center justify-between">
+          <a href="zambia-birding-tours.html" class="text-gray-500 text-sm">
+            Zambia
+          </a>
+          <a href="https://example.com/read-zambia">
+            <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+              Read
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+      <!-- Birding in Liwonde National Park -->
+      <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="malawi">
+        <img src="assets/images/sample2.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+        <div class="p-4 flex flex-col flex-grow">
+          <h2 class="text-xl font-bold mb-2">Birding in Liwonde National Park</h2>
+          <div class="mt-auto flex items-center justify-between">
+            <a href="malawi-birding-tours.html" class="text-gray-500 text-sm">
+              Malawi
+            </a>
+            <a href="https://example.com/read-malawi">
+              <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+                Read
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Birding in Nyika National Park-->
+      <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="malawi">
+        <img src="assets/images/malawi/denham's-bustard-nyika-national-park.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+        <div class="p-4 flex flex-col flex-grow">
+          <h2 class="text-xl font-bold mb-2">Birding in Nyika National Park</h2>
+          <div class="mt-auto flex items-center justify-between">
+            <a href="malawi-birding-tours.html" class="text-gray-500 text-sm">
+              Malawi
+            </a>
+            <a href="birding-in-malawi-nyika-plateau-national-park.html">
+              <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+                Read
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Birding in Dzalanyama Forest -->
+      <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="malawi">
+        <img src="assets/images/sample2.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+        <div class="p-4 flex flex-col flex-grow">
+          <h2 class="text-xl font-bold mb-2">Birding in Dzalanyama Forest</h2>
+          <div class="mt-auto flex items-center justify-between">
+            <a href="malawi-birding-tours.html" class="text-gray-500 text-sm">
+              Malawi
+            </a>
+            <a href="https://example.com/read-malawi">
+              <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+                Read
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Birding at Lake Malawi -->
+      <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="malawi">
+        <img src="assets/images/sample2.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+        <div class="p-4 flex flex-col flex-grow">
+          <h2 class="text-xl font-bold mb-2">Birding at Lake Malawi</h2>
+          <div class="mt-auto flex items-center justify-between">
+            <a href="malawi-birding-tours.html" class="text-gray-500 text-sm">
+              Malawi
+            </a>
+            <a href="https://example.com/read-malawi">
+              <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+                Read
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    <!-- Birding in Kruger National Park -->
+    <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="south-africa">
+      <img src="assets/images/sample3.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
       <div class="p-4 flex flex-col flex-grow">
         <h2 class="text-xl font-bold mb-2">Birding in Kruger National Park</h2>
-        <!-- Bottom container: Gray text on left, button on right -->
         <div class="mt-auto flex items-center justify-between">
-          <a href="south-africa-birding-tours.html" target="_blank" class="text-gray-500 text-sm">
+          <a href="south-africa-birding-tours.html" class="text-gray-500 text-sm">
             South Africa
           </a>
-          <a href="https://example.com/birding-kruger" target="_blank">
+          <a href="https://example.com/read-south-africa">
             <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
               Read
             </button>
@@ -150,17 +268,160 @@
         </div>
       </div>
     </div>
-    <!-- Card 3 -->
-    <div class="bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]">
-      <img src="assets/images/shire-river-floodplain-liwondenp.jpg" alt="Card Image 3" class="w-full h-[225px] object-cover">
+
+    <!-- Bird Photography -->
+    <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="general">
+      <img src="assets/images/Red-Chested Cuckoo.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
       <div class="p-4 flex flex-col flex-grow">
-        <h2 class="text-xl font-bold mb-2">Malawi: An Underrated Birding Destination in Africa</h2>
-        <!-- Bottom container: Gray text on left, button on right -->
+        <h2 class="text-xl font-bold mb-2">Bird Photography</h2>
         <div class="mt-auto flex items-center justify-between">
-          <a href="malawi-birding-tours.html" target="_blank" class="text-gray-500 text-sm">
+          <a href="https://example.com/general-info" class="text-gray-500 text-sm">
+            General
+          </a>
+          <a href="https://example.com/read-general">
+            <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+              Read
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- What to Bring on Safari -->
+    <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="general">
+      <img src="assets/images/Red-Chested Cuckoo.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+      <div class="p-4 flex flex-col flex-grow">
+        <h2 class="text-xl font-bold mb-2">What to bring on a birding tour</h2>
+        <div class="mt-auto flex items-center justify-between">
+          <a href="https://example.com/general-info" class="text-gray-500 text-sm">
+            General
+          </a>
+          <a href="https://example.com/read-general">
+            <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+              Read
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- What to Wear on Safari -->
+    <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="general">
+      <img src="assets/images/Red-Chested Cuckoo.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+      <div class="p-4 flex flex-col flex-grow">
+        <h2 class="text-xl font-bold mb-2">What to Wear on Safari</h2>
+        <div class="mt-auto flex items-center justify-between">
+          <a href="https://example.com/general-info" class="text-gray-500 text-sm">
+            General
+          </a>
+          <a href="https://example.com/read-general">
+            <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+              Read
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Birds of Zambia List -->
+    <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="zambia">
+      <img src="assets/images/sample4.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+      <div class="p-4 flex flex-col flex-grow">
+        <h2 class="text-xl font-bold mb-2">Birds of Zambia List</h2>
+        <div class="mt-auto flex items-center justify-between">
+          <a href="zambia-birding-tours.html" class="text-gray-500 text-sm">
+            Zambia
+          </a>
+          <a href="https://example.com/read-zambia">
+            <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+              Read
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+     <!-- Birds of South Africa List -->
+     <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="south-africa">
+      <img src="assets/images/sample3.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+      <div class="p-4 flex flex-col flex-grow">
+        <h2 class="text-xl font-bold mb-2">Birds of South Africa List</h2>
+        <div class="mt-auto flex items-center justify-between">
+          <a href="south-africa-birding-tours.html" class="text-gray-500 text-sm">
+            South Africa
+          </a>
+          <a href="https://example.com/read-south-africa">
+            <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+              Read
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+      <!-- Birds of Malawi List -->
+      <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="malawi">
+        <img src="assets/images/sample2.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+        <div class="p-4 flex flex-col flex-grow">
+          <h2 class="text-xl font-bold mb-2">Birds of Malawi List</h2>
+          <div class="mt-auto flex items-center justify-between">
+            <a href="malawi-birding-tours.html" class="text-gray-500 text-sm">
+              Malawi
+            </a>
+            <a href="https://example.com/read-malawi">
+              <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+                Read
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+     <!-- Birding in Zambia -->
+     <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="zambia">
+      <img src="assets/images/sample4.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+      <div class="p-4 flex flex-col flex-grow">
+        <h2 class="text-xl font-bold mb-2">Birding in Zambia</h2>
+        <div class="mt-auto flex items-center justify-between">
+          <a href="zambia-birding-tours.html" class="text-gray-500 text-sm">
+            Zambia
+          </a>
+          <a href="https://example.com/read-zambia">
+            <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+              Read
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Birding in South Africa -->
+    <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="south-africa">
+      <img src="assets/images/sample3.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+      <div class="p-4 flex flex-col flex-grow">
+        <h2 class="text-xl font-bold mb-2">Birding in South Africa</h2>
+        <div class="mt-auto flex items-center justify-between">
+          <a href="south-africa-birding-tours.html" class="text-gray-500 text-sm">
+            South Africa
+          </a>
+          <a href="https://example.com/read-south-africa">
+            <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
+              Read
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Birding in Malawi -->
+    <div class="blog-card bg-white rounded-lg shadow overflow-hidden flex flex-col h-[400px]" data-category="malawi">
+      <img src="assets/images/sample2.jpg" alt="Blog Card" class="w-full h-[225px] object-cover">
+      <div class="p-4 flex flex-col flex-grow">
+        <h2 class="text-xl font-bold mb-2">Birding in Malawi</h2>
+        <div class="mt-auto flex items-center justify-between">
+          <a href="malawi-birding-tours.html" class="text-gray-500 text-sm">
             Malawi
           </a>
-          <a href="https://example.com/malawi-birding-destination" target="_blank">
+          <a href="https://example.com/read-malawi">
             <button class="bg-black text-white py-3 px-6 text-lg rounded border border-black hover:bg-white hover:text-black transition-colors duration-200">
               Read
             </button>
@@ -168,8 +429,14 @@
         </div>
       </div>
     </div>
+
+
+<!-- IMPORTANT KEEP AT BOTTOM -->
   </div>
 </section>
+
+
+
 
 <footer class="bg-white text-gray-800 py-12 text-center">
   <div class="container mx-auto px-4">
