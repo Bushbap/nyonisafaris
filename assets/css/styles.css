@@ -4,7 +4,6 @@
   }
 }
 
-
 ::selection {
   background-color: #ffe449;
   color: black;
@@ -36,6 +35,54 @@ p {
   font-family: 'Avenir', sans-serif;
 }
 
+     /* For large screens: width greater than 1024px */
+  @media (min-width: 1025px) {
+    .responsive-video {
+      width: 1420px;
+      height: 450px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .responsive-video iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* For tablets and smaller devices: width 1024px or less */
+  @media (max-width: 1024px) {
+    .responsive-video {
+      width: 100%;
+      margin: 0 auto;
+      /* Use padding-bottom to maintain aspect ratio (450/1420) */
+      position: relative;
+      padding-bottom: calc(450 / 1420 * 100%);
+      overflow: hidden;
+    }
+    .responsive-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .responsive-img {
+    object-fit: cover;
+    height: 500px; /* Default height on larger devices */
+    width: 100%;
+  }
+  /* Adjust the image height on smaller devices */
+  @media (max-width: 768px) {
+    .responsive-img {
+      height: auto;
+      max-height: 300px;
+    }
+  }
+
 .portrait-img {
     object-fit: cover;
     width: 100%;
@@ -64,3 +111,31 @@ p {
   text-underline-offset: 4px;
   text-decoration-color: #fa1515;
 }
+
+/* Remove focus outline and border from hamburger button */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Override the default navbar-toggler-icon to use a black SVG */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Limit offcanvas width to 50% on small devices */
+@media (max-width: 767.98px) {
+  .offcanvas.offcanvas-end {
+    width: 50%;
+  }
+}
+
+.offcanvas .dropdown-menu {
+  border: none;
+  box-shadow: none;
+}
+
