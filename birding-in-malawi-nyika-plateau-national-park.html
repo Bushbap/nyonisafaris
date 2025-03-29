@@ -113,7 +113,7 @@
         <a href="contact.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">Contact</a>
       </li>
       <li>
-        <a href="blog.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">Blog</a>
+        <a href="blog.html" class="relative text-black underline underline-offset-[5px] decoration-2 decoration-red-700">Blog</a>
       </li>
     </ul>
     
@@ -137,10 +137,11 @@
       </div>
       <a href="about.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">About</a>
       <a href="contact.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">Contact</a>
-      <a href="blog.html" class="relative text-black hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-[5px]">Blog</a>
+      <a href="blog.html" class="relative text-black underline underline-offset-[5px] decoration-2 decoration-red-700">Blog</a>
     </div>
   </nav>
 <!-- End of Nav -->
+
  <!-- Responsive Hero Text Section -->
 <section class="py-4 lg:py-12">
   <div class="container mx-auto px-4 flex flex-col items-center justify-center py-8">
@@ -390,54 +391,52 @@ Why Nyika National Park is Worth Visiting
   </div>
 </section>
 
-<!-- Responsive Four Image Boxes with 3/4 Aspect Ratio and Clickable Images -->
+<!-- Responsive Four Image Boxes with Modal Image Viewer -->
 <section class="py-4 lg:py-12">
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-2 justify-items-center">
       <!-- First Image Box -->
       <div class="w-full lg:max-w-[400px]">
-        <a href="assets/images/malawi/nyika-national-park/birding-nyika-national-park.jpg" target="_blank">
+        <a href="assets/images/malawi/nyika-national-park/birding-nyika-national-park.jpg" class="open-modal">
           <div class="relative w-full overflow-hidden aspect-[3/4]">
             <img src="assets/images/malawi/nyika-national-park/birding-nyika-national-park.jpg" 
                  alt="Walking to a Montane Forest patch in Nyika Plateau National Park" 
                  class="absolute inset-0 w-full h-full object-cover">
           </div>
         </a>
-        <p class="mt-1 text-xs text-center">
-          Searching for birds in Nyika Plateau National Park
-        </p>
+        <p class="mt-1 text-xs text-center">Searching for birds in Nyika Plateau National Park</p>
       </div>
       
       <!-- Second Image Box -->
       <div class="w-full lg:max-w-[400px]">
-        <a href="assets/images/malawi/nyika-national-park/dusky-turtle-dove-nyika-national-park.jpg" target="_blank">
+        <a href="assets/images/malawi/nyika-national-park/dusky-turtle-dove-nyika-national-park.jpg" class="open-modal">
           <div class="relative w-full overflow-hidden aspect-[3/4]">
             <img src="assets/images/malawi/nyika-national-park/dusky-turtle-dove-nyika-national-park.jpg" 
                  alt="Dusky Turtle Dove in Nyika National Park" 
                  class="absolute inset-0 w-full h-full object-cover">
           </div>
         </a>
-        <p class="mt-1 text-xs text-center">a Dusky Turtle Dove perched and gave us a good view.</p>
+        <p class="mt-1 text-xs text-center">A Dusky Turtle Dove perched and gave us a good view.</p>
       </div>
       
       <!-- Third Image Box -->
       <div class="w-full lg:max-w-[400px]">
-        <a href="assets/images/malawi/nyika-national-park/flower-nyika-national-park.jpg" target="_blank">
+        <a href="assets/images/malawi/nyika-national-park/flower-nyika-national-park.jpg" class="open-modal">
           <div class="relative w-full overflow-hidden aspect-[3/4]">
             <img src="assets/images/malawi/nyika-national-park/flower-nyika-national-park.jpg" 
-                 alt="Third image description" 
+                 alt="Flower in Nyika National Park" 
                  class="absolute inset-0 w-full h-full object-cover">
           </div>
         </a>
-        <p class="mt-1 text-xs text-center">Nyika is also a botanists dream!</p>
+        <p class="mt-1 text-xs text-center">Nyika is also a botanist's dream!</p>
       </div>
       
       <!-- Fourth Image Box -->
       <div class="w-full lg:max-w-[400px]">
-        <a href="assets/images/malawi/nyika-national-park/rolling-hills-nyika-national-park.jpg" target="_blank">
+        <a href="assets/images/malawi/nyika-national-park/rolling-hills-nyika-national-park.jpg" class="open-modal">
           <div class="relative w-full overflow-hidden aspect-[3/4]">
             <img src="assets/images/malawi/nyika-national-park/rolling-hills-nyika-national-park.jpg" 
-                 alt="Fourth image description" 
+                 alt="Rolling Hills in Nyika National Park" 
                  class="absolute inset-0 w-full h-full object-cover">
           </div>
         </a>
@@ -447,6 +446,13 @@ Why Nyika National Park is Worth Visiting
   </div>
 </section>
 
+<!-- Modal Overlay -->
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-50">
+  <div class="relative">
+    <img id="modal-img" src="" alt="Modal Image" class="max-w-full max-h-screen">
+    <button id="modal-close" class="absolute top-2 right-2 text-orange-500 text-2xl">&times;</button>
+  </div>
+</div>
 
 
 

@@ -63,6 +63,33 @@ pills.forEach(pill => {
   });
 });
 
+// Select modal elements
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-img');
+const modalClose = document.getElementById('modal-close');
+
+// Attach click event to each image link
+document.querySelectorAll('.open-modal').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    const imgSrc = this.getAttribute('href');
+    modalImg.src = imgSrc; // Set the modal image source
+    modal.classList.remove('hidden'); // Show modal
+  });
+});
+
+// Close modal when clicking on the close button
+modalClose.addEventListener('click', function() {
+  modal.classList.add('hidden');
+});
+
+// Also close modal when clicking outside the image
+modal.addEventListener('click', function(e) {
+  if (e.target === modal) {
+    modal.classList.add('hidden');
+  }
+});
+
 
 
 
