@@ -90,6 +90,36 @@ modal.addEventListener('click', function(e) {
   }
 });
 
+// FAQ Accordion 
+
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach((accordion) => {
+    accordion.addEventListener("click", function () {
+        const panel = this.nextElementSibling;
+        const icon = this.querySelector(".icon");
+
+        // Close all other panels first
+        document.querySelectorAll(".panel").forEach((item) => {
+            if (item !== panel) {
+                item.style.maxHeight = null;
+                item.classList.remove("py-3");
+                item.previousElementSibling.querySelector(".icon").innerText = "+";
+            }
+        });
+
+        // Toggle current panel
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            panel.classList.remove("py-3");
+            icon.innerText = "+";
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.classList.add("py-3");
+            icon.innerText = "-";
+        }
+    });
+});
 
 
 
