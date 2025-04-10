@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bird Profile - [Bird Name]</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Optional: Customize Tailwind config here -->
+</head>
+<body class="bg-green-50 text-gray-800">
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="py-12 text-center">
+    <div class="container mx-auto px-4">
+      <!-- Bird Illustration Placeholder -->
+      <div class="mb-6">
+        <img src="https://via.placeholder.com/400x300?text=Bird+Illustration" alt="Hand-drawn Bird Illustration" class="mx-auto rounded shadow">
+      </div>
+      <!-- Bird Names and Description -->
+      <h1 class="text-4xl font-bold mb-2">Bird Common Name</h1>
+      <h2 class="text-2xl italic mb-4">Scientific Name</h2>
+      <p class="max-w-2xl mx-auto text-lg">
+        This is a short description of the bird. It is known for its distinctive plumage and charming call.
+        Often spotted in diverse habitats, this bird exemplifies the beauty of our natural world.
+      </p>
+    </div>
+  </section>
+
+  <!-- IDENTIFICATION SECTION -->
+  <section id="identification" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Identification</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card: Size & Shape -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="text-xl font-semibold mb-2">Size &amp; Shape</h3>
+          <p>Details about the bird’s size and shape go here.</p>
+        </div>
+        <!-- Card: Color Pattern -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="text-xl font-semibold mb-2">Color Pattern</h3>
+          <p>Details about the bird’s color pattern go here.</p>
+        </div>
+        <!-- Card: Field Marks -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="text-xl font-semibold mb-2">Field Marks</h3>
+          <p>Notable field marks and markings are described here.</p>
+        </div>
+        <!-- Card: Voice with Audio Button -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="text-xl font-semibold mb-2">Voice</h3>
+          <button class="bg-blue-500 text-white px-3 py-1 rounded">Play Audio</button>
+        </div>
+        <!-- Card: Similar Species -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="text-xl font-semibold mb-2">Similar Species</h3>
+          <p>Information on similar species can be found here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABITAT AND RANGE SECTION -->
+  <section id="habitat" class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Habitat &amp; Range</h2>
+      <!-- Tab Navigation -->
+      <div class="flex justify-center space-x-2 mb-6">
+        <button class="tab-button bg-green-100 px-4 py-2 rounded shadow active" data-tab="habitat-tab">Habitat</button>
+        <button class="tab-button bg-green-100 px-4 py-2 rounded shadow" data-tab="seasonal-tab">Seasonal Presence</button>
+        <button class="tab-button bg-green-100 px-4 py-2 rounded shadow" data-tab="range-tab">Range Map</button>
+        <button class="tab-button bg-green-100 px-4 py-2 rounded shadow" data-tab="elevation-tab">Elevation</button>
+      </div>
+      <!-- Tab Content -->
+      <div id="tab-content">
+        <div id="habitat-tab" class="tab-content block p-4 bg-green-50 rounded shadow">
+          <p>Habitat description goes here. Describe the types of environments the bird frequents.</p>
+        </div>
+        <div id="seasonal-tab" class="tab-content hidden p-4 bg-green-50 rounded shadow">
+          <p>Seasonal presence details go here. When and where this bird is most common seasonally.</p>
+        </div>
+        <div id="range-tab" class="tab-content hidden p-4 bg-green-50 rounded shadow">
+          <img src="https://via.placeholder.com/600x400?text=Range+Map" alt="Range Map" class="mx-auto rounded shadow">
+        </div>
+        <div id="elevation-tab" class="tab-content hidden p-4 bg-green-50 rounded shadow">
+          <p>Elevation range details go here. Information on the altitudinal distribution of the species.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEHAVIOR SECTION -->
+  <section id="behavior" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Behavior</h2>
+      <div class="space-y-4">
+        <!-- Accordion: Feeding Behavior -->
+        <div class="bg-white rounded shadow">
+          <button class="w-full text-left px-4 py-2 focus:outline-none accordion-header" data-target="feeding">
+            Feeding Behavior
+          </button>
+          <div class="accordion-content hidden px-4 py-2 border-t" data-target="feeding">
+            <p>Feeding behavior details go here.</p>
+          </div>
+        </div>
+        <!-- Accordion: Flight Style -->
+        <div class="bg-white rounded shadow">
+          <button class="w-full text-left px-4 py-2 focus:outline-none accordion-header" data-target="flight">
+            Flight Style
+          </button>
+          <div class="accordion-content hidden px-4 py-2 border-t" data-target="flight">
+            <p>Flight style details go here.</p>
+          </div>
+        </div>
+        <!-- Accordion: Breeding Behavior -->
+        <div class="bg-white rounded shadow">
+          <button class="w-full text-left px-4 py-2 focus:outline-none accordion-header" data-target="breeding">
+            Breeding Behavior
+          </button>
+          <div class="accordion-content hidden px-4 py-2 border-t" data-target="breeding">
+            <p>Breeding behavior details go here.</p>
+          </div>
+        </div>
+        <!-- Accordion: Migratory Patterns -->
+        <div class="bg-white rounded shadow">
+          <button class="w-full text-left px-4 py-2 focus:outline-none accordion-header" data-target="migration">
+            Migratory Patterns
+          </button>
+          <div class="accordion-content hidden px-4 py-2 border-t" data-target="migration">
+            <p>Migratory patterns details go here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICE SECTION -->
+  <section id="voice" class="py-12 bg-green-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Voice</h2>
+      <div class="bg-white rounded-lg shadow p-6 max-w-md mx-auto">
+        <p class="mb-4">
+          Description of the bird's vocalizations goes here. Click the button below to listen to an audio sample.
+        </p>
+        <audio controls class="w-full">
+          <source src="audio-file.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSERVATION STATUS SECTION -->
+  <section id="conservation" class="py-12">
+    <div class="container mx-auto px-4 text-center">
+      <div class="inline-block bg-red-500 text-white px-4 py-2 rounded-full mb-4">
+        Conservation Status: Endangered
+      </div>
+      <p class="text-lg">IUCN Status: Critically Endangered</p>
+    </div>
+  </section>
+
+  <!-- FUN FACTS / CULTURAL NOTES SECTION -->
+  <section id="fun-facts" class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Fun Facts &amp; Cultural Notes</h2>
+      <div class="bg-green-50 rounded-lg shadow p-6">
+        <p>Some interesting trivia or cultural notes about this bird go here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO & ILLUSTRATION GALLERY SECTION -->
+  <section id="gallery" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Photo &amp; Illustration Gallery</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <img src="https://via.placeholder.com/300x200?text=Photo+1" alt="Photo 1" class="rounded shadow">
+        <img src="https://via.placeholder.com/300x200?text=Photo+2" alt="Photo 2" class="rounded shadow">
+        <img src="https://via.placeholder.com/300x200?text=Photo+3" alt="Photo 3" class="rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENCES / LEARN MORE SECTION -->
+  <footer id="references" class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-4">References / Learn More</h2>
+      <p>
+        <a href="#" class="text-blue-500 underline">External Link 1</a> |
+        <a href="#" class="text-blue-500 underline">External Link 2</a> |
+        <a href="#" class="text-blue-500 underline">External Link 3</a>
+      </p>
+      <p class="mt-4 text-sm text-gray-600">
+        Attributions and credits for illustrations and audio samples go here.
+      </p>
+    </div>
+  </footer>
+
+  <!-- MINIMAL JS FOR TABS AND ACCORDION FUNCTIONALITY -->
+  <script>
+    // Tabs functionality
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('data-tab');
+        // Hide all tab contents
+        tabContents.forEach(content => {
+          content.classList.add('hidden');
+        });
+        // Show the selected tab content
+        document.getElementById(target).classList.remove('hidden');
+        // Update active button state
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+
+    // Accordion functionality
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const targetId = header.getAttribute('data-target');
+        const content = document.querySelector(`.accordion-content[data-target="${targetId}"]`);
+        if (content.classList.contains('hidden')) {
+          content.classList.remove('hidden');
+        } else {
+          content.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

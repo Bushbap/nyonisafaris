@@ -13,6 +13,7 @@ body {
   src: url('/assets/font/Forum-Regular.ttf') format('truetype');
 }
 
+
 @font-face {
   font-family: 'Avenir';
   src: url('/assets/font/avenir-light.ttf') format('truetype');

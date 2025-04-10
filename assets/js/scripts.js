@@ -1,3 +1,5 @@
+console.log('scripts.js loaded');
+
 document.addEventListener('click', function(event) {
   const menu = document.getElementById('mobile-menu');
   const icon = document.getElementById('hamburger-icon');
@@ -120,6 +122,7 @@ accordions.forEach((accordion) => {
         }
     });
 });
+
 
 
 
